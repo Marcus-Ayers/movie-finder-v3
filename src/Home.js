@@ -16,7 +16,7 @@ const Movie = (props) => {
     <div className="row">
       <div className="col-4 col-md-2 col-lg-1 mb-3">
         <Link to={`/movie/${imdbID}/`}>
-          <img src={Poster} className="img-fluid" />
+          <img src={Poster} className="img-fluid" alt='movie poster'/>
         </Link>
       </div>
       <div className="col-8 col-md-10 col-lg-11 mb-3">
@@ -38,10 +38,13 @@ class MovieFinder extends React.Component {
       results: [],
       error: '',
     };
+    
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+
 
   handleChange(event) {
     this.setState({ searchTerm: event.target.value });
