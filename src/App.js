@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Home from './Home';
+
 import './App.css';
 
-function App() {
+const NotFound = () => {
+  return <h2>404 Not Found</h2>;
+}
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+    <Router>
+      <div className="">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Link className="navbar-brand m-auto" to="/">Movie Finder</Link>
+      </nav>
+      </div>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route component={NotFound} />
+      </Routes>
+    </Router>
     </div>
   );
 }
