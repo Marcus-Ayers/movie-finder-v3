@@ -10,9 +10,8 @@ const NotFound = () => {
 
 const App = () => {
   return (
-    <Router basename="/first-react-app">
     <div className="container">
-    <Router>
+    <Router basename="/movie-finder-v3">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand m-auto navbar-title" to="/">Movie Finder</Link>
       </nav>
@@ -23,7 +22,7 @@ const App = () => {
       </Switch>
     </Router>
     </div>
-    </Router>
+    
   );
 }
 
