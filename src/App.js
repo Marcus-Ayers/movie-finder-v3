@@ -10,6 +10,7 @@ const NotFound = () => {
 
 const App = () => {
   return (
+    <Router basename="/first-react-app">
     <div className="container">
     <Router>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,6 +23,7 @@ const App = () => {
       </Switch>
     </Router>
     </div>
+    </Router>
   );
 }
 
